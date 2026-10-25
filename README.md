@@ -1,5 +1,5 @@
 # StrumGroove v2.7 — Strum Trainer
-(Launch StrumGroove app](https://dougalder.github.io/strum-groove/)
+[Launch StrumGroove app](https://dougalder.github.io/strum-groove/)
 A self-contained web app to help guitarists and ukulele players learn and practice strumming patterns. Built entirely in HTML, CSS, and vanilla JavaScript — no dependencies, no servers, no signup required.
 
 ## Features
