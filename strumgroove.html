@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>StrumGroove v2.1 — Strum Trainer</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAElklEQVRYhb2XS2xUVRjHf+eeO3PncafTYUpnUJRWRAuNL2qamNAdiRAsiQbjxrhggY9EQ8LCuGviyoQ9MbW6clFi2JCYqA0K6KYR5NVOUUohlHYKnc7jznRed+5xMW2hlHlYgf/q5n7n+/6/+53XjOA+mWakXWp8BuwDtgF+Ho3SQEwhvs9kzEG4VlwOiOWHYDD6LkoNAYFHZFpLE46Sb1vWzMQKwJL58P1Aj1kJhfNGJnP3H7HU9ms8/i9fLcWltDXXI70e8wtg9xM1BxBEvO7ADR3FW802XhOCXdtbefO1MDs2m0RDbgDiyRLj01l++ivB77EUjlJN1VOoD0SwJWIBZqPBz0W8DLy3lVc66s/UxRsWA8OTXJ/LN8OQEsGWSEPcF5/yM/jJDoI+HcdxWMzlKeaL2JUKALqUGF4Dn9+LpmlkCzYfHotx5Va2IUFDgJBf58Tnr7LBdFEqlkglLZwl4welSUlrKIDbcLOQLfPOVxdI5uy6AFojwiP7O9hguiiXbVKJdE1zAKdSIZVIUy7bbDBdHNnf0ah8fYCNQTd7d4ZRQDqZaWpxOUqRTmYAxd6eNiJB9/oB+nva0KVGMV/CLldbGc07RPPOmrHDvQcZ7j0IgF22KRTK6JpgX0/b+gF6tgYBKBYKK+9CBUWosLoTI939TLZ3MdnexUh3fzUnX83ZuVSjlvR6wW2bfACUSuWaY0a6+xnt7CNQSAMw2tkHwJ6JHwF4YalGLdXtQKuvyudU1rYc4G5gE6OdffROnSWUSxDKJeidOstoZx9xf2RVjXUBqJUTUuGtrF2Az6ZmOHT6KLvHTq682z12kkOnj9JuzVbh69o3mIJktsymkIHfge6ETdx3j3dLtkJ00UGoORb11Wd5m3UHoUsAFrK1pw8adOBWorqQbJ9B3KcRXXTwVBSeiiK66BD3aWvMl+V2Vb9tOlF4aLwpgPOTFgCGYXDTlMR9Gm5H4XYUcZ/GTVPWzHUbBgDnrmXWD/Db2AIAHp+BplUNU4YgZYg15l3xy3TFLwMgNIHHVwU4E0vWBai7BmLTOS7dtHh5SwC/6cPKZLkafHjK61N/rDybAR9CCC7csIhN5+oCNLwLvvnlNgD+gBfdVX9LAeguHb9Z3ftDI7cbjm8IcHo8ya+XFwBBKBxE02qnaFISCgcBwalLC5wZr9/+pgAABo5PcitRQEpJeGMITa5N06RGuK0VKSUzC0W+/OF6M6WbA0jlbA5/e5VUzkbqkrb2MB6vsRL3eA3a2sNIXZLK2Xw6NNFw/y9LBFsiKaD+jbGkZ8Iejn20nWfCHuDeHeF2uwCYTRb5+OsYU3ea+jkGkJEej7kH6GhqdN7m5J/ztPh1dmw2kVIiZXU7/nwxweGhCWZTpWbNATEuPW5TItjfbErJdjgzluTClMXTIQ+zyRIDxyf57tQMhXKjk/8Be8SgAPRgMHIexUv/Kfv/K+0o+bwG2I5TOQAknqC5Eo46aFkz8xqAZc3/7Si5C4g9AfO0cNSBVPbOCYCVA71UsuaLxY5Bw8jPadBK9b+i5xGZZkFdEWiDjpLvZ7Lxc8uBfwGHsbXT5tPKDwAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAABmJLR0QA/wD/AP+gvaeTAAAc50lEQVR4nO2deZAb1Z3Hv68PnS21RnNoPOMTG3wBNsQB2wuE27BLJcCmkjWEIyHcZCHXbpFsZbMhW1SKJQeQhWCoAIYYEi5zhxsMC8YGJ7YZ37YZ3+MZez+cOy+bOw6Zeb9y/v8fudmzefP////fzMzMzMiIAAAAAAAAAAAAAAAAAAAYImJcEdqh5B4JsSjAMoAdiVGIUQuhBGOgJC+kISQmJGQglWCIQ2Zk2Np2JJnWNpm5K1tMhJW6iZbmqmVfZkWv5ljW4dH+wJ0OfaG8IdYXpG8NecCHtX/ZBiQRBaCGWZBEGYJhJw5wl7w4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHOuNGz4=">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0e17;--surface:#1a1929;--surface2:#252438;--surface3:#2e2d44;
+  --accent:#ff6b35;--accent2:#ffd166;--down:#ff6b35;--up:#4ecdc4;
+  --kick:#e07;--snare:#fa0;--hihat:#0bf;
+  --muted:#6b6a80;--text:#fffffe;--text2:#a7a6b8;--radius:14px;
+  --border:rgba(255,255,255,0.07);
+}
+:root[data-theme="light"]{
+  --bg:#f4f2ee;--surface:#fff;--surface2:#ede9e3;--surface3:#e0ddd6;
+  --accent:#e85d2a;--accent2:#c47a00;--down:#e85d2a;--up:#2a9d8f;
+  --muted:#8a8070;--text:#1a1614;--text2:#4a4540;
+  --border:rgba(0,0,0,0.09);
+}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 20% 50%,rgba(255,107,53,.07) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(78,205,196,.05) 0%,transparent 50%)}
+:root[data-theme="light"] body::before{opacity:.3}
+*{transition:background-color .2s,border-color .2s,color .15s}
+
+/* ── Layout ── */
+.app-frame{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:14px 12px 60px}
+.header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.logo{font-size:22px;font-weight:900;letter-spacing:-.5px}
+.logo span{color:var(--accent)}
+.ver-badge{font-size:9px;font-weight:800;color:var(--muted);background:var(--surface2);padding:2px 7px;border-radius:20px;letter-spacing:.5px;margin-top:2px}
+.tagline{font-size:10px;color:var(--muted);margin-left:auto;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.icon-btn{width:34px;height:34px;border-radius:50%;background:var(--surface2);border:1.5px solid var(--border);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0;font-family:inherit}
+.icon-btn:hover{color:var(--accent2);border-color:var(--accent2);transform:scale(1.08)}
+
+/* ── Tabs ── */
+.tabs{display:flex;gap:2px;background:var(--surface);border-radius:12px;padding:4px;margin-bottom:14px;border:1px solid var(--border)}
+.tab-btn{flex:1;padding:8px 4px;border:none;background:transparent;color:var(--text2);font-family:inherit;font-size:11px;font-weight:800;letter-spacing:.5px;cursor:pointer;border-radius:9px;transition:all .15s;text-transform:uppercase}
+.tab-btn.active{background:var(--accent);color:#fff}
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+
+/* ── Display card ── */
+.display-card{background:var(--surface);border-radius:var(--radius);padding:16px;border:1px solid var(--border);margin-bottom:12px}
+.pattern-header{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.pattern-title{font-size:17px;font-weight:900;letter-spacing:-.3px}
+.pattern-badge{font-size:10px;font-weight:700;color:var(--muted);background:var(--surface2);padding:2px 8px;border-radius:20px}
+.pattern-desc{font-size:12px;color:var(--text2);margin-bottom:6px;line-height:1.5;font-weight:600}
+.dup-btn{font-size:10px;font-weight:800;letter-spacing:.5px;color:var(--muted);background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;padding:3px 10px;cursor:pointer;font-family:inherit;transition:all .15s}
+.dup-btn:hover{color:var(--accent2);border-color:var(--accent2);background:var(--surface3)}
+.beat-grid-wrap{width:100%;overflow:hidden}
+.beat-labels,.beat-row,.beat-indicator-row{display:flex;width:100%}
+.beat-cell,.strum-cell,.beat-dot{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center}
+.beat-cell{height:22px;flex-direction:column}
+.beat-label-main{font-size:clamp(10px,3.5vw,15px);font-weight:900;color:var(--text2);line-height:1}
+.beat-label-and{font-size:clamp(7px,2.5vw,10px);color:var(--muted);font-weight:700}
+.strum-cell{aspect-ratio:1;border-radius:8px;transition:background .07s,transform .07s}
+.strum-cell.active-beat{background:rgba(255,107,53,.18);transform:scale(1.08)}
+.strum-cell.active-beat svg{filter:drop-shadow(0 0 6px #ff6b35)}
+.strum-cell.active-beat-up{background:rgba(78,205,196,.15);transform:scale(1.08)}
+.strum-cell.active-beat-up svg{filter:drop-shadow(0 0 6px #4ecdc4)}
+.arrow-svg{width:65%;height:65%;display:block}
+.beat-dot{height:14px;margin-top:4px}
+.beat-dot-inner{width:6px;height:6px;border-radius:50%;background:var(--surface2);transition:background .07s,box-shadow .07s}
+.beat-dot-inner.lit-down{background:var(--accent);box-shadow:0 0 8px var(--accent)}
+.beat-dot-inner.lit-up{background:var(--up);box-shadow:0 0 8px var(--up)}
+
+/* ── Controls ── */
+.controls{display:flex;align-items:center;gap:12px;background:var(--surface);border-radius:var(--radius);padding:14px 16px;border:1px solid var(--border);margin-bottom:12px;flex-wrap:wrap}
+.play-btn{width:52px;height:52px;border-radius:50%;background:var(--accent);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .13s,box-shadow .13s;box-shadow:0 4px 16px rgba(255,107,53,.35)}
+.play-btn:active{transform:scale(.94)}
+.play-btn svg{width:22px;height:22px}
+.slider-group{flex:1;min-width:140px}
+.slider-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.slider-label{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.slider-val{font-size:11px;font-weight:900;color:var(--accent)}
+input[type=range]{width:100%;height:4px;-webkit-appearance:none;appearance:none;background:var(--surface2);border-radius:2px;outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 0 3px rgba(255,107,53,.2)}
+.speed-presets{display:flex;gap:4px;margin-top:6px}
+.speed-preset{background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:3px 8px;font-size:10px;font-weight:800;color:var(--text2);cursor:pointer;font-family:inherit;transition:all .13s}
+.speed-preset:hover{border-color:var(--accent);color:var(--accent)}
+.count-display{font-size:13px;font-weight:900;color:var(--text2);min-width:70px;text-align:center;letter-spacing:2px}
+.cur-d{color:var(--down);font-size:16px}
+.cur-u{color:var(--up);font-size:16px}
+
+/* ── Drum row ── */
+.drum-row{display:flex;align-items:center;gap:10px;background:var(--surface);border-radius:10px;padding:10px 14px;border:1px solid var(--border);margin-bottom:12px}
+.drum-label{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+.drum-select{background:var(--surface2);border:1px solid var(--border);border-radius:7px;color:var(--text);font-family:inherit;font-size:12px;font-weight:700;padding:4px 8px;cursor:pointer;flex:1;min-width:0}
+.drum-vol-group{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.drum-vol-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.drum-vol-slider{width:80px}
+.drum-vis{display:flex;gap:3px;margin-top:6px;flex-wrap:wrap}
+.drum-cell-d{width:12px;height:12px;border-radius:3px;background:var(--surface2);border:1px solid var(--border);display:inline-block;transition:background .07s}
+.drum-cell-d.dk{background:var(--kick)}
+.drum-cell-d.ds{background:var(--snare)}
+.drum-cell-d.dh{background:var(--hihat)}
+
+/* ── Pattern list (Patterns tab) ── */
+.section-label{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.pattern-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:5px;margin-bottom:14px}
+.pattern-btn{background:var(--surface);border:1.5px solid transparent;border-radius:9px;padding:7px 8px 6px;cursor:pointer;text-align:left;color:var(--text2);font-family:inherit}
+.pattern-btn:hover,.pattern-btn:active{border-color:var(--accent);color:var(--text)}
+.pattern-btn.active{background:rgba(255,107,53,.13);border-color:var(--accent);color:var(--text)}
+.pattern-btn .pnum{font-size:18px;font-weight:900;color:var(--accent);line-height:1}
+.pattern-btn .pname{font-size:9px;font-weight:700;margin-top:1px;line-height:1.2}
+.pattern-btn.custom{background:linear-gradient(135deg,rgba(78,205,196,.12),rgba(78,205,196,.04));border-color:rgba(78,205,196,.35);color:var(--text)}
+.pattern-btn.custom .pnum{color:var(--up)}
+.pattern-btn.custom .pname{color:var(--text2)}
+.pattern-btn.custom::after{content:'★';font-size:8px;color:var(--up);position:absolute;top:5px;right:6px;opacity:.8}
+.pattern-btn.custom{position:relative}
+.pattern-btn.custom:hover,.pattern-btn.custom:active{border-color:var(--up);background:rgba(78,205,196,.2)}
+.pattern-btn.custom.active{background:rgba(78,205,196,.22);border-color:var(--up)}
+.pattern-action-bar{background:var(--surface);border:1.5px solid var(--accent);border-radius:12px;padding:12px 14px;animation:fadeSlideIn .18s ease}
+@keyframes fadeSlideIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+.pattern-action-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.pattern-action-name{font-size:14px;font-weight:900;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pattern-action-time{font-size:10px;font-weight:700;color:var(--muted);background:var(--surface2);padding:2px 7px;border-radius:20px;flex-shrink:0}
+.mini-beat-wrap{width:100%;overflow:hidden;margin-bottom:10px}
+.mini-beat-row{display:flex;width:100%;gap:3px}
+.mini-beat-labels{display:flex;width:100%;gap:3px;margin-bottom:3px}
+.mini-beat-label{flex:1;text-align:center;font-size:9px;font-weight:800;color:var(--muted)}
+.mini-beat-label.main{color:var(--text2)}
+.mini-cell{flex:1;border-radius:7px;padding:5px 2px;display:flex;align-items:center;justify-content:center;background:var(--surface2);border:1.5px solid var(--border);min-height:36px}
+.mini-cell.is-down{background:rgba(255,107,53,.15);border-color:rgba(255,107,53,.5)}
+.mini-cell.is-up{background:rgba(78,205,196,.15);border-color:rgba(78,205,196,.5)}
+.mini-cell.is-ghost{background:rgba(255,209,102,.1);border-color:rgba(255,209,102,.4)}
+.mini-cell.is-rest{opacity:.4}
+.mini-cell svg{width:70%;height:auto;display:block}
+
+/* ── Queue panel ── */
+.queue-panel{background:var(--surface);border-radius:var(--radius);padding:14px 16px;border:1px solid var(--border);margin-bottom:12px}
+.queue-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.queue-title{font-size:13px;font-weight:900}
+.queue-add-btn{margin-left:auto;width:28px;height:28px;border-radius:50%;background:var(--accent);border:none;color:#fff;font-size:18px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;font-family:inherit}
+.queue-hint{font-size:11px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.queue-list{display:flex;flex-direction:column;gap:5px}
+.queue-item{display:flex;align-items:center;gap:8px;background:var(--surface2);border-radius:9px;padding:8px 10px;border:1.5px solid transparent;cursor:pointer;transition:all .13s}
+.queue-item.selected{border-color:var(--accent);background:rgba(255,107,53,.08)}
+.queue-item.playing{border-color:var(--up)}
+.queue-drag{cursor:grab;color:var(--muted);font-size:14px;flex-shrink:0}
+.queue-item-num{font-size:16px;font-weight:900;color:var(--accent);min-width:24px}
+.queue-item-info{flex:1;min-width:0}
+.queue-item-name{font-size:12px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.queue-item-sub{font-size:10px;color:var(--muted);font-weight:600}
+.queue-item-controls{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.repeats-btn{width:22px;height:22px;border-radius:5px;background:var(--surface3);border:1px solid var(--border);color:var(--text2);font-size:14px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;line-height:1}
+.repeats-btn:hover{border-color:var(--accent);color:var(--accent)}
+.repeats-count{font-size:12px;font-weight:900;min-width:18px;text-align:center}
+.repeats-label{font-size:11px;color:var(--muted);font-weight:700}
+.queue-del-btn{width:22px;height:22px;border-radius:5px;background:transparent;border:1px solid var(--border);color:var(--muted);font-size:11px;cursor:pointer;font-family:inherit;margin-left:2px}
+.queue-del-btn:hover{border-color:#e55;color:#e55}
+.queue-progress{margin-top:10px;display:flex;gap:5px;align-items:center;font-size:11px;font-weight:700;color:var(--muted)}
+.queue-progress-bar{flex:1;height:4px;background:var(--surface2);border-radius:2px;overflow:hidden}
+.queue-progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .2s;width:0%}
+
+/* ── Sound panel ── */
+.sound-panel{background:var(--surface);border-radius:var(--radius);padding:14px 16px;border:1px solid var(--border);margin-bottom:12px}
+.sound-panel-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sound-panel-title{font-size:14px;font-weight:900}
+.toggle-wrap{margin-left:auto;display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;font-weight:700;color:var(--text2)}
+.toggle-sw{width:32px;height:17px;background:var(--surface2);border-radius:9px;position:relative;transition:background .2s;border:1px solid var(--border);flex-shrink:0}
+.toggle-sw.on{background:var(--accent)}
+.toggle-knob{width:11px;height:11px;background:#fff;border-radius:50%;position:absolute;top:2px;left:2px;transition:left .2s}
+.toggle-sw.on .toggle-knob{left:17px}
+.sound-options-row{display:flex;gap:14px;flex-wrap:wrap}
+.sound-picker{display:flex;flex-direction:column;gap:6px;flex:1;min-width:170px}
+.sound-picker-label{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dot-d{background:var(--down)}.dot-u{background:var(--up)}
+.sound-select-row{display:flex;gap:4px;flex-wrap:wrap}
+.sound-opt{background:var(--surface2);border:1.5px solid transparent;border-radius:7px;padding:4px 9px;font-size:11px;font-weight:700;color:var(--text2);cursor:pointer;transition:all .14s;font-family:inherit}
+.sound-opt:hover{color:var(--text);border-color:var(--border)}
+.sound-opt.active-d{border-color:var(--down);color:var(--down);background:rgba(255,107,53,.1)}
+.sound-opt.active-u{border-color:var(--up);color:var(--up);background:rgba(78,205,196,.1)}
+
+/* ── Custom pattern builder ── */
+.builder-panel{background:var(--surface);border-radius:var(--radius);padding:14px 16px;border:1px solid var(--border);margin-bottom:12px}
+.builder-title{font-size:14px;font-weight:900;margin-bottom:12px}
+.my-pat-row{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--surface2);margin-bottom:6px;border:1px solid var(--border)}
+.my-pat-name{flex:1;font-size:13px;font-weight:700;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.my-pat-steps{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.5px;font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px}
+.my-pat-btn{width:28px;height:28px;border-radius:8px;border:1.5px solid var(--border);background:var(--surface3);color:var(--muted);cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:inherit}
+.my-pat-btn:hover{color:var(--accent);border-color:var(--accent)}
+.my-pat-btn.del:hover{color:#f44;border-color:#f44}
+.builder-title.editing{color:var(--accent2)}
+.builder-name-row{display:flex;gap:8px;margin-bottom:10px;align-items:center}
+.builder-input{flex:1;background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;padding:8px 30px 8px 10px;font-family:inherit;font-size:13px;color:var(--text);outline:none}
+.builder-input:focus{border-color:var(--accent)}
+.input-wrap{position:relative;flex:1}
+.input-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;line-height:1;padding:0;font-family:inherit}
+.input-clear:hover{color:var(--text)}
+.beat-builder-row{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
+.beat-tap-btn{flex:1;min-width:36px;aspect-ratio:1;border-radius:8px;border:1.5px solid var(--border);background:var(--surface2);font-size:12px;font-weight:900;cursor:pointer;font-family:inherit;color:var(--text2);transition:all .13s;display:flex;align-items:center;justify-content:center}
+.beat-tap-btn[data-val="D"]{border-color:var(--down);color:var(--down);background:rgba(255,107,53,.1)}
+.beat-tap-btn[data-val="U"]{border-color:var(--up);color:var(--up);background:rgba(78,205,196,.1)}
+.beat-tap-btn[data-val="gD"]{border-color:var(--muted);color:var(--muted)}
+.beat-tap-btn[data-val="R"]{border-color:transparent;color:var(--muted);background:var(--surface)}
+.builder-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.builder-btn{padding:7px 14px;border-radius:8px;border:1.5px solid var(--border);background:var(--surface2);color:var(--text2);font-family:inherit;font-size:12px;font-weight:800;cursor:pointer;transition:all .13s}
+.builder-btn:hover{border-color:var(--accent);color:var(--accent)}
+.builder-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.builder-btn.primary:hover{background:#ff8c5a}
+.paste-area{background:var(--surface2);border:1.5px dashed var(--border);border-radius:8px;padding:8px 10px;font-size:11px;color:var(--muted);font-weight:600;min-height:40px;cursor:text;white-space:pre-wrap;word-break:break-all}
+.paste-area:focus{outline:2px solid var(--accent);outline-offset:1px;color:var(--text)}
+
+/* ── Files tab ── */
+.files-panel{background:var(--surface);border-radius:var(--radius);padding:14px 16px;border:1px solid var(--border);margin-bottom:12px}
+.files-panel h3{font-size:14px;font-weight:900;margin-bottom:10px}
+.files-btn-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.about-box{background:var(--surface2);border-radius:10px;padding:14px;font-size:12px;color:var(--text2);line-height:1.6;font-weight:600}
+.about-box strong{color:var(--text)}
+.about-box a{color:var(--accent);text-decoration:none}
+
+/* ── Legend ── */
+.legend{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--text2)}
+
+/* ── Good-for ── */
+.goodfor-wrap{position:relative;display:inline-flex;align-items:center}
+.info-btn{width:20px;height:20px;border-radius:50%;background:var(--surface2);border:1.5px solid rgba(255,209,102,.4);color:var(--accent2);font-size:12px;font-weight:900;font-family:inherit;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.info-btn:hover,.info-btn:active{background:rgba(255,209,102,.15);border-color:var(--accent2)}
+.goodfor-tooltip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);width:240px;background:var(--surface2);border:1px solid rgba(255,209,102,.3);border-radius:10px;padding:10px 12px;font-size:11px;font-weight:600;line-height:1.5;color:var(--text2);box-shadow:0 8px 24px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:20}
+.goodfor-tooltip::before{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--surface2)}
+.goodfor-tooltip .gf-label{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent2);margin-bottom:4px;display:block}
+@media(hover:hover){.goodfor-wrap:hover .goodfor-tooltip{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}}
+.goodfor-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:100;display:none;align-items:flex-end;justify-content:center}
+.goodfor-modal-overlay.show{display:flex}
+.goodfor-modal{background:var(--surface);border:1px solid rgba(255,209,102,.25);border-radius:18px 18px 0 0;padding:18px 20px 28px;width:100%;max-width:760px;animation:slideUp .22s ease}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.goodfor-modal-handle{width:36px;height:4px;background:var(--surface2);border-radius:2px;margin:0 auto 14px}
+.goodfor-modal-title{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:5px}
+.goodfor-modal-pattern{font-size:16px;font-weight:900;margin-bottom:10px}
+.goodfor-modal-text{font-size:13px;font-weight:600;line-height:1.6;color:var(--text2)}
+.goodfor-modal-close{margin-top:16px;width:100%;background:var(--surface2);border:none;border-radius:10px;padding:11px;color:var(--text);font-size:13px;font-weight:800;font-family:inherit;cursor:pointer}
+
+/* ── Unlock banner ── */
+.unlock-banner{background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.22);border-radius:9px;padding:8px 14px;font-size:12px;font-weight:700;color:var(--text2);display:none;margin-bottom:10px}
+.unlock-banner.show{display:block}
+.unlock-banner strong{color:var(--accent)}
+
+/* ── Touch sliders ── */
+@media(pointer:coarse){
+  input[type=range]{height:6px}
+  input[type=range]::-webkit-slider-thumb{width:22px;height:22px}
+  .drum-vol-slider::-webkit-slider-thumb{width:22px;height:22px}
+}
+</style>
+</head>
+<body>
+<div class="app-frame">
+
+  <div class="header">
+    <div class="logo">Strum<span>Groove</span></div>
+    <div class="ver-badge">v2.7</div>
+    <div class="tagline">Strum Trainer</div>
+    <button class="icon-btn" id="wakeLockBtn" onclick="toggleWakeLock()" title="Keep screen awake" style="display:none">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" id="wakeLockIcon">
+        <path d="M12 2a7 7 0 0 1 7 7c0 4-3 6-3 9H8c0-3-3-5-3-9a7 7 0 0 1 7-7z"/><line x1="8" y1="22" x2="16" y2="22"/><line x1="12" y1="18" x2="12" y2="22"/>
+      </svg>
+    </button>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle light/dark mode">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="unlock-banner" id="unlockBanner">🔊 <strong>Tap Play</strong> to activate audio — browsers require a tap before sound plays.</div>
+
+  <!-- TAB NAV -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('play')">▶ Play</button>
+    <button class="tab-btn" onclick="showTab('patterns')">≡ Patterns</button>
+    <button class="tab-btn" onclick="showTab('queue')">🎼 Queue</button>
+    <button class="tab-btn" onclick="showTab('sounds')">🎵 Sounds</button>
+    <button class="tab-btn" onclick="showTab('files')">💾 Files</button>
+  </div>
+
+  <!-- PLAY TAB -->
+  <div id="tab-play" class="tab-pane active">
+    <div class="display-card">
+      <div class="pattern-header">
+        <div class="pattern-title" id="patternTitle">Pattern 1</div>
+        <div class="pattern-badge" id="patternTime">4/4</div>
+        <div class="pattern-badge" id="customBadge" style="display:none;background:rgba(78,205,196,.18);color:var(--up);border-color:rgba(78,205,196,.4)">★ Mine</div>
+        <div class="goodfor-wrap" id="goodforWrap">
+          <button class="info-btn" id="infoBtn">i</button>
+          <div class="goodfor-tooltip" id="goodforTooltip">
+            <span class="gf-label">Sounds Good For</span>
+            <span id="goodforText"></span>
+          </div>
+        </div>
+      </div>
+      <div class="pattern-desc" id="patternDesc"></div>
+      <div style="margin-top:6px">
+        <button class="dup-btn" id="dupBtn" onclick="duplicateCurrentPattern()" title="Copy this pattern into the builder to edit">⧉ Duplicate &amp; Edit</button>
+      </div>
+      <div class="beat-grid-wrap">
+        <div id="beatDisplay"></div>
+        <div class="beat-indicator-row" id="beatDots"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="play-btn" id="playBtn" onclick="togglePlay()">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+      </button>
+      <div class="slider-group">
+        <div class="slider-header">
+          <span class="slider-label">Tempo</span>
+          <span class="slider-val" id="bpmDisplay">80 BPM</span>
+        </div>
+        <input type="range" id="bpmSlider" min="40" max="200" value="80" oninput="updateBPM(this.value)">
+        <div class="speed-presets">
+          <button class="speed-preset" onclick="setBPM(50)">Slow</button>
+          <button class="speed-preset" onclick="setBPM(80)">Med</button>
+          <button class="speed-preset" onclick="setBPM(120)">Fast</button>
+          <button class="speed-preset" onclick="setBPM(160)">Fast+</button>
+        </div>
+      </div>
+      <div class="slider-group">
+        <div class="slider-header">
+          <span class="slider-label">Volume</span>
+        </div>
+        <div style="height:18px"></div>
+        <input type="range" id="volSlider" min="0" max="100" value="75" oninput="updateVolume(this.value)">
+      </div>
+      <div class="count-display" id="countDisplay">—</div>
+    </div>
+
+    <!-- DRUM ROW -->
+    <div class="drum-row" id="drumRow">
+      <span class="drum-label">Drums</span>
+      <select class="drum-select" id="drumSelect" onchange="changeDrumPattern()">
+        <option value="off">Off</option>
+        <option value="rock">🥁 Rock</option>
+        <option value="reggae">🌴 Reggae</option>
+        <option value="bossa">🎷 Bossa Nova</option>
+        <option value="waltz">💃 Waltz</option>
+        <option value="folk">🪕 Folk</option>
+        <option value="funk">🎸 Funk</option>
+      </select>
+      <div class="drum-vol-group">
+        <span class="drum-vol-label">Vol</span>
+        <input type="range" class="drum-vol-slider" id="drumVolSlider" min="0" max="100" value="40" oninput="updateDrumVol(this.value)">
+      </div>
+    </div>
+    <div class="drum-vis" id="drumVis"></div>
+
+    <div class="legend">
+      <div class="legend-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="4" x2="12" y2="16"/><polyline points="6 12 12 18 18 12"/></svg>Down</div>
+      <div class="legend-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ecdc4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="8"/><polyline points="6 12 12 6 18 12"/></svg>Up</div>
+      <div class="legend-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b6a80" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3 2"><line x1="12" y1="4" x2="12" y2="16"/><polyline points="6 12 12 18 18 12"/></svg>Ghost</div>
+      <div class="legend-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3a3950" stroke-width="1.5"><circle cx="12" cy="12" r="5"/></svg>Rest</div>
+    </div>
+  </div><!-- /tab-play -->
+
+  <!-- QUEUE TAB -->
+  <div id="tab-queue" class="tab-pane">
+    <div class="queue-panel">
+      <div class="queue-header">
+        <div class="queue-title">🎼 Practice Queue</div>
+        <button class="queue-add-btn" onclick="queueAdd()" title="Add pattern">+</button>
+      </div>
+      <div class="queue-hint">Select a block to assign a pattern. Use the Patterns tab to pick. Hit Play on the Play tab to run the queue in order.</div>
+      <div class="queue-list" id="queueList"></div>
+      <div class="queue-progress" id="queueProgress" style="display:none">
+        <span id="queueProgressLabel">—</span>
+        <div class="queue-progress-bar"><div class="queue-progress-fill" id="queueProgressFill"></div></div>
+      </div>
+    </div>
+  </div><!-- /tab-queue -->
+
+  <!-- PATTERNS TAB -->
+  <div id="tab-patterns" class="tab-pane">
+    <div class="section-label" id="patternCountLabel">Choose a Pattern (46 patterns)</div>
+    <div class="pattern-grid" id="patternGrid"></div>
+
+    <!-- Selected pattern action bar -->
+    <div id="patternActionBar" style="display:none;margin-bottom:12px">
+      <div class="pattern-action-bar">
+        <div class="pattern-action-header">
+          <span class="pattern-action-name" id="patternActionName"></span>
+          <span class="pattern-action-time" id="patternActionTime">4/4</span>
+          <button class="builder-btn primary" style="flex-shrink:0;margin:0" onclick="duplicateCurrentPattern()">⧉ Duplicate &amp; Edit</button>
+        </div>
+        <div class="mini-beat-wrap">
+          <div class="mini-beat-labels" id="patternActionLabels"></div>
+          <div class="mini-beat-row" id="patternActionCells"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- My Custom Patterns -->
+    <div class="builder-panel" id="myPatternsPanel" style="display:none">
+      <div class="builder-title">⭐ My Patterns</div>
+      <div id="myPatternsList"></div>
+    </div>
+
+    <!-- Build Your Own Beat -->
+    <div class="builder-panel">
+      <div class="builder-title" id="builderTitle">🛠 Build Your Own Beat</div>
+      <div class="builder-name-row">
+        <div class="input-wrap">
+          <input type="text" class="builder-input" id="builderName" placeholder="Pattern name…" maxlength="40">
+          <button class="input-clear" onclick="clearInput('builderName')" title="Clear">✕</button>
+        </div>
+      </div>
+      <div style="font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Tap each slot to cycle: Rest → Down → Up → Ghost</div>
+      <div class="beat-builder-row" id="builderSlots"></div>
+      <div class="builder-actions">
+        <button class="builder-btn" onclick="builderCancel()" id="builderCancelBtn" style="display:none">✕ Cancel</button>
+        <button class="builder-btn" onclick="builderReset()">Reset</button>
+        <button class="builder-btn" onclick="builderPreview()">▶ Preview</button>
+        <button class="builder-btn primary" id="builderSaveBtn" onclick="builderSave()">+ Add to Patterns</button>
+      </div>
+      <div style="font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;margin-top:6px">Paste D/U notation or JSON from clipboard</div>
+      <div contenteditable="true" class="paste-area" id="pasteArea" placeholder="Paste here: D DU UDU or JSON…"></div>
+      <div class="builder-actions" style="margin-top:6px;margin-bottom:0">
+        <button class="builder-btn" onclick="doPaste()">📋 Paste from Clipboard</button>
+        <button class="builder-btn primary" onclick="parsePaste()">Import</button>
+      </div>
+    </div>
+  </div><!-- /tab-patterns -->
+
+  <!-- SOUNDS TAB -->
+  <div id="tab-sounds" class="tab-pane">
+    <div class="sound-panel">
+      <div class="sound-panel-header">
+        <div class="sound-panel-title">🎵 Sound Options</div>
+        <label class="toggle-wrap" onclick="toggleSound()">
+          <div class="toggle-sw on" id="soundToggle"><div class="toggle-knob"></div></div>
+          <span id="soundLabel">Sound On</span>
+        </label>
+      </div>
+      <div class="sound-options-row">
+        <div class="sound-picker">
+          <div class="sound-picker-label"><span class="dot dot-d"></span> Down Stroke</div>
+          <div class="sound-select-row" id="downSoundOpts"></div>
+        </div>
+        <div class="sound-picker">
+          <div class="sound-picker-label"><span class="dot dot-u"></span> Up Stroke</div>
+          <div class="sound-select-row" id="upSoundOpts"></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /tab-sounds -->
+
+  <!-- FILES TAB -->
+  <div id="tab-files" class="tab-pane">
+    <div class="files-panel">
+      <h3>💾 Save / Load</h3>
+      <div class="files-btn-row">
+        <button class="builder-btn primary" onclick="exportJSON()">⬇ Export Patterns &amp; Queue</button>
+        <button class="builder-btn" onclick="triggerImport()">⬆ Import JSON File</button>
+        <input type="file" id="importFile" accept=".json" style="display:none" onchange="importJSON(this)">
+      </div>
+      <div style="font-size:11px;color:var(--muted);font-weight:600;margin-bottom:12px">Export saves your custom patterns and current queue. Import merges new custom patterns and restores a queue.</div>
+    </div>
+    <div class="files-panel">
+      <h3>ℹ About StrumGroove</h3>
+      <div class="about-box">
+        <p><strong>StrumGroove v2.1</strong> is a self-contained strum trainer that runs entirely in your browser — no server, no account, no internet connection needed after first load (fonts are the only external resource).</p>
+        <br>
+        <p><strong>Your data stays with you.</strong> No strumming patterns, custom beats, or queue settings are ever sent anywhere. Everything lives in this HTML file and in your exports.</p>
+        <br>
+        <p><strong>All sound is synthesised</strong> using the Web Audio API — no audio files are downloaded.</p>
+        <br>
+        <p>Built with ❤️ using HTML, CSS and vanilla JavaScript.</p>
+      </div>
+    </div>
+  </div><!-- /tab-files -->
+
+</div><!-- app-frame -->
+
+<!-- Good-for modal (mobile) -->
+<div class="goodfor-modal-overlay" id="goodforModalOverlay">
+  <div class="goodfor-modal">
+    <div class="goodfor-modal-handle"></div>
+    <div class="goodfor-modal-title">Sounds Good For</div>
+    <div class="goodfor-modal-pattern" id="goodforModalPattern"></div>
+    <div class="goodfor-modal-text" id="goodforModalText"></div>
+    <button class="goodfor-modal-close" onclick="closeGoodforModal()">Close</button>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════
+   TABS
+═══════════════════════════════════════════ */
+function showTab(id) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  const btns = document.querySelectorAll('.tab-btn');
+  const map = {play:0,patterns:1,queue:2,sounds:3,files:4};
+  btns[map[id]].classList.add('active');
+}
+
+/* ═══════════════════════════════════════════
+   THEME
+═══════════════════════════════════════════ */
+var MOON = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+var SUN  = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>';
+(function(){
+  try{ var s=localStorage.getItem('sgTheme'); if(s==='light') document.documentElement.setAttribute('data-theme','light'); }catch(e){}
+  updateThemeIcon();
+})();
+function toggleTheme(){
+  var isL=document.documentElement.getAttribute('data-theme')==='light';
+  document.documentElement.setAttribute('data-theme', isL?'dark':'light');
+  try{localStorage.setItem('sgTheme',isL?'dark':'light');}catch(e){}
+  updateThemeIcon();
+}
+function updateThemeIcon(){
+  var isL=document.documentElement.getAttribute('data-theme')==='light';
+  var ic=document.getElementById('themeIcon'); if(ic) ic.innerHTML=isL?MOON:SUN;
+  var b=document.getElementById('themeBtn'); if(b) b.title=isL?'Switch to dark mode':'Switch to light mode';
+}
+
+/* ═══════════════════════════════════════════
+   SCREEN WAKE LOCK
+═══════════════════════════════════════════ */
+var wakeLock=null, wakeLockActive=false;
+(function(){ if('wakeLock' in navigator){ var btn=document.getElementById('wakeLockBtn'); if(btn) btn.style.display=''; } })();
+function updateWakeLockBtn(){
+  var btn=document.getElementById('wakeLockBtn'); if(!btn) return;
+  btn.title=wakeLockActive?'Screen stay-awake ON — tap to turn off':'Keep screen awake';
+  btn.style.background=wakeLockActive?'var(--accent)':'';
+  btn.style.borderColor=wakeLockActive?'var(--accent)':'';
+  btn.style.color=wakeLockActive?'#fff':'';
+}
+async function toggleWakeLock(){
+  if(!('wakeLock' in navigator)) return;
+  if(wakeLockActive){
+    try{ if(wakeLock) await wakeLock.release(); }catch(e){}
+    wakeLock=null; wakeLockActive=false;
+  } else {
+    try{
+      wakeLock=await navigator.wakeLock.request('screen');
+      wakeLockActive=true;
+      wakeLock.addEventListener('release',function(){ wakeLockActive=false; wakeLock=null; updateWakeLockBtn(); });
+    }catch(e){ wakeLockActive=false; }
+  }
+  updateWakeLockBtn();
+}
+
+/* ═══════════════════════════════════════════
+   AUDIO ENGINE
+═══════════════════════════════════════════ */
+var audioCtx=null, masterGain=null, drumGain=null;
+var soundEnabled=true, volume=0.75, drumVolume=0.4;
+var downSoundType='warm', upSoundType='bright';
+
+function ensureAudio(){
+  if(!audioCtx){
+    audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+    masterGain=audioCtx.createGain(); masterGain.gain.value=volume; masterGain.connect(audioCtx.destination);
+    drumGain=audioCtx.createGain(); drumGain.gain.value=drumVolume; drumGain.connect(audioCtx.destination);
+  }
+  if(audioCtx.state==='suspended') audioCtx.resume().catch(()=>{});
+}
+function resumeAudio(){ if(audioCtx&&audioCtx.state==='suspended') audioCtx.resume().catch(()=>{}); }
+document.addEventListener('visibilitychange',async()=>{
+  if(document.visibilityState==='visible'){
+    resumeAudio();
+    // Re-acquire wake lock if it was active before page was hidden (iOS releases it on hide)
+    if(wakeLockActive && !wakeLock){
+      try{
+        wakeLock=await navigator.wakeLock.request('screen');
+        wakeLock.addEventListener('release',function(){ wakeLockActive=false; wakeLock=null; updateWakeLockBtn(); });
+      }catch(e){}
+    }
+  }
+});
+window.addEventListener('focus',resumeAudio);
+window.addEventListener('pageshow',resumeAudio);
+document.addEventListener('touchstart',resumeAudio,{once:false,passive:true});
+document.addEventListener('click',resumeAudio,{passive:true});
+
+function osc(type,freq,freqEnd,vol,dur,t,delay){
+  var sd=delay||0;
+  var o=audioCtx.createOscillator(), g=audioCtx.createGain();
+  o.type=type; o.frequency.setValueAtTime(freq,t+sd);
+  if(freqEnd) o.frequency.exponentialRampToValueAtTime(freqEnd,t+sd+dur*0.6);
+  g.gain.setValueAtTime(vol,t+sd); g.gain.exponentialRampToValueAtTime(0.001,t+sd+dur);
+  o.connect(g); g.connect(masterGain); o.start(t+sd); o.stop(t+sd+dur+0.01);
+}
+function makeNoise(freq,filterType,vol,dur,t,gainNode){
+  var gn=gainNode||masterGain;
+  var bufSize=Math.floor(audioCtx.sampleRate*dur);
+  var buf=audioCtx.createBuffer(1,bufSize,audioCtx.sampleRate);
+  var d=buf.getChannelData(0); for(var i=0;i<bufSize;i++) d[i]=Math.random()*2-1;
+  var src=audioCtx.createBufferSource(); src.buffer=buf;
+  var filt=audioCtx.createBiquadFilter(); filt.type=filterType; filt.frequency.value=freq;
+  var g=audioCtx.createGain(); g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(0.001,t+dur);
+  src.connect(filt); filt.connect(g); g.connect(gn); src.start(t);
+}
+
+/* Strum sounds */
+function snd_down_warm(t){ osc('sine',180,90,0.9,0.25,t,0); osc('triangle',320,240,0.45,0.20,t,0); makeNoise(900,'bandpass',0.22,0.05,t); }
+function snd_down_thunk(t){ osc('sine',100,55,1.1,0.30,t,0); makeNoise(500,'lowpass',0.30,0.06,t); }
+function snd_down_strum(t){ [220,330,440,550,660].forEach((f,i)=>{ osc('triangle',f*(1+i*0.002),null,0.25,0.30,t,i*0.008); }); makeNoise(800,'bandpass',0.18,0.04,t); }
+function snd_down_click(t){ makeNoise(1200,'bandpass',0.60,0.03,t); osc('square',200,null,0.50,0.05,t,0); }
+function snd_down_deep(t){ osc('sine',70,40,1.20,0.35,t,0); osc('triangle',260,null,0.30,0.15,t,0); }
+function snd_up_bright(t){ osc('triangle',560,480,0.55,0.15,t,0); osc('sine',1050,null,0.22,0.10,t,0); makeNoise(2200,'highpass',0.15,0.025,t); }
+function snd_up_pluck(t){ [440,660,880,1100].forEach((f,i)=>{ osc('sine',f,null,0.22,0.18,t,i*0.006); }); }
+function snd_up_snap(t){ makeNoise(3500,'highpass',0.50,0.02,t); osc('triangle',900,null,0.40,0.04,t,0); }
+function snd_up_chime(t){ [700,1050,1400,1750].forEach((f,i)=>{ osc('sine',f,null,0.18,0.35,t,i*0.004); }); }
+function snd_up_scratch(t){ makeNoise(1800,'bandpass',0.40,0.04,t); makeNoise(3000,'highpass',0.20,0.03,t); osc('sawtooth',400,600,0.25,0.06,t,0); }
+
+var DOWN_SOUNDS={ warm:{label:'🪵 Warm',fn:snd_down_warm}, thunk:{label:'🥁 Thunk',fn:snd_down_thunk}, strum:{label:'🎸 Strum',fn:snd_down_strum}, click:{label:'👆 Click',fn:snd_down_click}, deep:{label:'🔊 Deep',fn:snd_down_deep} };
+var UP_SOUNDS={ bright:{label:'✨ Bright',fn:snd_up_bright}, pluck:{label:'🎵 Pluck',fn:snd_up_pluck}, snap:{label:'🫰 Snap',fn:snd_up_snap}, chime:{label:'🔔 Chime',fn:snd_up_chime}, scratch:{label:'🎚 Scratch',fn:snd_up_scratch} };
+
+function playDown(){ if(soundEnabled&&audioCtx) DOWN_SOUNDS[downSoundType].fn(audioCtx.currentTime); }
+function playUp(){ if(soundEnabled&&audioCtx) UP_SOUNDS[upSoundType].fn(audioCtx.currentTime); }
+function playGhost(){ if(soundEnabled&&audioCtx) osc('sine',140,100,0.15,0.08,audioCtx.currentTime,0); }
+
+/* ── Drum engine ── */
+function drumKick(t){ 
+  var o=audioCtx.createOscillator(), g=audioCtx.createGain();
+  o.type='sine'; o.frequency.setValueAtTime(140,t); o.frequency.exponentialRampToValueAtTime(40,t+0.08);
+  g.gain.setValueAtTime(1,t); g.gain.exponentialRampToValueAtTime(0.001,t+0.15);
+  o.connect(g); g.connect(drumGain); o.start(t); o.stop(t+0.16);
+}
+function drumSnare(t){
+  makeNoise(3000,'bandpass',0.55,0.12,t,drumGain);
+  var o=audioCtx.createOscillator(), g=audioCtx.createGain();
+  o.type='triangle'; o.frequency.value=220;
+  g.gain.setValueAtTime(0.4,t); g.gain.exponentialRampToValueAtTime(0.001,t+0.08);
+  o.connect(g); g.connect(drumGain); o.start(t); o.stop(t+0.09);
+}
+function drumHihat(t,open){
+  var dur=open?0.18:0.04;
+  makeNoise(8000,'highpass',0.35,dur,t,drumGain);
+}
+
+/* Drum patterns: each is array of 8 slots, each slot = {k,s,h,ho} */
+var DRUM_PATTERNS = {
+  off: null,
+  rock: [
+    {k:1,s:0,h:1,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:1,h:1,ho:0},{k:0,s:0,h:1,ho:0},
+    {k:1,s:0,h:1,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:1,h:1,ho:0},{k:0,s:0,h:1,ho:0}
+  ],
+  reggae: [
+    {k:1,s:0,h:0,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:0,h:0,ho:0},{k:0,s:1,h:0,ho:0},
+    {k:0,s:0,h:0,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:0,h:0,ho:0},{k:0,s:1,h:0,ho:0}
+  ],
+  bossa: [
+    {k:1,s:0,h:0,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:0,h:0,ho:0},{k:0,s:1,h:1,ho:0},
+    {k:0,s:0,h:0,ho:0},{k:1,s:0,h:1,ho:0},{k:0,s:0,h:0,ho:0},{k:0,s:1,h:1,ho:0}
+  ],
+  waltz: [
+    {k:1,s:0,h:1,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:1,h:1,ho:0},
+    {k:0,s:0,h:1,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:0,h:0,ho:0},{k:0,s:0,h:0,ho:0}
+  ],
+  folk: [
+    {k:1,s:0,h:1,ho:0},{k:0,s:0,h:0,ho:0},{k:0,s:1,h:1,ho:0},{k:0,s:0,h:1,ho:0},
+    {k:1,s:0,h:1,ho:0},{k:0,s:0,h:0,ho:0},{k:0,s:1,h:1,ho:0},{k:0,s:0,h:1,ho:0}
+  ],
+  funk: [
+    {k:1,s:0,h:1,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:1,h:1,ho:0},{k:0,s:0,h:0,ho:1},
+    {k:0,s:0,h:1,ho:0},{k:0,s:0,h:1,ho:0},{k:0,s:1,h:1,ho:0},{k:0,s:0,h:1,ho:0}
+  ]
+};
+var currentDrumPattern = 'off';
+function changeDrumPattern(){ currentDrumPattern=document.getElementById('drumSelect').value; renderDrumVis(); }
+function updateDrumVol(v){ drumVolume=v/100; if(drumGain) drumGain.gain.value=drumVolume; }
+function playDrumStep(step){
+  if(!audioCtx||currentDrumPattern==='off') return;
+  var pat=DRUM_PATTERNS[currentDrumPattern];
+  if(!pat) return;
+  var sl=pat[step%pat.length]; if(!sl) return;
+  var t=audioCtx.currentTime;
+  if(sl.k) drumKick(t);
+  if(sl.s) drumSnare(t);
+  if(sl.h) drumHihat(t,false);
+  if(sl.ho) drumHihat(t,true);
+}
+function renderDrumVis(){
+  var vis=document.getElementById('drumVis'); if(!vis) return;
+  if(currentDrumPattern==='off'){ vis.innerHTML=''; return; }
+  var pat=DRUM_PATTERNS[currentDrumPattern]; if(!pat){ vis.innerHTML=''; return; }
+  var html='';
+  pat.forEach(function(sl,i){
+    var cls='drum-cell-d'+(sl.k?' dk':sl.s?' ds':sl.h||sl.ho?' dh':'');
+    html+='<span class="'+cls+'" id="dc-'+i+'" title="'+(sl.k?'Kick':sl.s?'Snare':sl.h?'Hi-hat':'—')+'"></span>';
+  });
+  vis.innerHTML=html;
+}
+function updateDrumBeat(step){
+  var pat=DRUM_PATTERNS[currentDrumPattern]; if(!pat) return;
+  document.querySelectorAll('.drum-cell-d').forEach(function(el,i){
+    var sl=pat[i]; if(!sl) return;
+    el.style.transform = i===step ? 'scale(1.5)' : '';
+    el.style.boxShadow = i===step ? '0 0 6px var(--accent2)' : '';
+  });
+}
+
+/* ═══════════════════════════════════════════
+   PATTERNS DATA
+═══════════════════════════════════════════ */
+var PATTERNS_BUILTIN = [
+  {n:1,name:'Basic Down Strum',desc:'All four beats, down only. The most fundamental strum — perfect for total beginners finding their rhythm.',goodFor:'Beginners, folk, country, and simple pop songs that need a steady, driving rhythm.',steps:['D','R','D','R','D','R','D','R']},
+  {n:2,name:'Three & An Up',desc:'Three down strokes then a down-up finish on beat 4. Your first upstroke introduction.',goodFor:'Easing from all-downs into your first upstroke — a natural next step after Basic Down Strum.',steps:['D','R','D','R','D','R','D','U']},
+  {n:3,name:'Travis Sub / Punk',desc:'Down-up on every eighth note. Even time, all eight strokes.',goodFor:'Folk and country at slow tempos; played fast defines punk and pop-punk rhythm guitar.',steps:['D','U','D','U','D','U','D','U']},
+  {n:4,name:'Island Skip',desc:'Down, skip, down-up-down, skip, down-up. A relaxed island groove.',goodFor:'Laid-back acoustic and tropical-leaning songs where you want space without losing momentum.',steps:['D','R','D','U','D','R','D','U']},
+  {n:5,name:'D-U-D Skip',desc:'Down-up-down, rest, repeat. Punchy syncopated feel.',goodFor:'Upbeat pop and rock songs that want a punchy, syncopated drive without being too busy.',steps:['D','U','D','R','D','U','D','R']},
+  {n:6,name:'Folk Strum',desc:'Down, skip, down-up, gap, up-down. Open and airy with a pause in the middle.',goodFor:'Folk, Americana, and contemporary worship/CCM songs — rolling feel suited to storytelling ballads.',steps:['D','R','D','U','R','U','D','R']},
+  {n:7,name:'Funk Chuck Strum',desc:'Down-up, rest, up, down-up, rest, up. Deliberate gaps create the syncopated funk pocket.',goodFor:'Funk and R&B rhythm parts. Try it with Tracy Chapman or Chic.',steps:['D','U','R','U','D','U','R','U']},
+  {n:8,name:'Slow Ballad Strum',desc:'Two plain downs then two down-ups. Front-heavy with a busier second half.',goodFor:'Slow ballads — sparse, spaced-out strumming that leaves room for vocals.',steps:['D','R','D','R','D','U','D','U']},
+  {n:9,name:'Down-Up Basic',desc:'Down, skip, then rolling eighth notes the rest of the way.',goodFor:"The foundational down-up pattern most players learn first. 🎵 I'm a Believer (The Monkees), Knock on Wood.",steps:['D','R','D','U','D','U','D','U']},
+  {n:10,name:'Sparse Ups',desc:'Down-up, gap, up, gap, up, gap, up. Very sparse — mostly upstrokes on the "and"s.',goodFor:'Sparse, airy strumming — good when you want lots of breathing room between chord changes.',steps:['D','U','R','U','R','U','R','U']},
+  {n:11,name:'D-U Climb',desc:'Down-up, gap, up, gap, up-down-up. Climbing feel as upstrokes gradually fill the bar.',goodFor:'Songs that build energy gradually — the upstrokes filling in create momentum.',steps:['D','U','R','U','R','U','D','U']},
+  {n:12,name:'Up-Down Intro',desc:'Starts on an upstroke — reversed, lead-in feel.',goodFor:'Songs that start on the offbeat or have a pickup feel before the downbeat lands.',steps:['R','U','D','U','D','U','R','U']},
+  {n:13,name:'Synco 3',desc:'Down, skip, down-up-down, skip, down. Three-note phrase with rests.',goodFor:'Syncopated folk or singer-songwriter parts that want space without feeling empty.',steps:['D','R','D','U','D','R','D','R']},
+  {n:14,name:'Reggae Skank',desc:'Pure upstrokes on every "and". Bright, scratchy, and unconventional.',goodFor:'Reggae and ska comping. 🎵 Three Little Birds, Jamming (Bob Marley), Wild World (Cat Stevens).',steps:['R','U','R','U','R','U','R','U']},
+  {n:15,name:'Up Climb Finish',desc:'Three upstrokes building across the bar, then resolves with a down-up to close.',goodFor:'Building tension into a chorus or hook — the climbing upstrokes create anticipation.',steps:['R','U','R','U','R','U','D','U']},
+  {n:16,name:'Mirror Ups',desc:'Rest, up-down-up, rest, up-down-up. Symmetrical two-beat phrase repeated.',goodFor:'A 2/4-feel groove inside 4/4 — works for marching or bouncy pop songs.',steps:['R','U','D','U','R','U','D','U']},
+  {n:17,name:'Half Time',desc:'Down on beat 1, down on beat 3 only. Super sparse half-time feel.',goodFor:'Slow, heavy grooves and half-time feels — works great under a sparse vocal melody.',steps:['D','R','R','R','D','R','R','R']},
+  {n:18,name:'Bluegrass Chop',desc:'Downstrokes only on beats 2 and 4 — a backbeat strum.',goodFor:'Bluegrass rhythm guitar — percussive "chop" on the backbeat. 🎵 Any bluegrass or old-time jam.',steps:['R','R','D','R','R','R','D','R']},
+  {n:19,name:'D-U-D-D',desc:'Down-up-down, skip, down, skip, down. Solid and driving.',goodFor:'Driving rock or pop rhythm parts where you want the chord to land with authority on beat 3.',steps:['D','U','D','R','D','R','D','R']},
+  {n:20,name:'D-U Gap U-D-U',desc:'Down-up, gap, up-down, gap, down-up. Syncopated with nicely placed gaps.',goodFor:'Mid-tempo pop or rock songs that want syncopation without losing the four-on-the-floor feel.',steps:['D','U','R','U','D','R','D','U']},
+  {n:21,name:'Sparse D + Ups',desc:'Single down, long gap, then up-down-up at the end. Dramatic space before a busy finish.',goodFor:'Dramatic intros or pre-chorus builds — the long pause creates suspense.',steps:['D','R','R','R','R','U','D','U']},
+  {n:22,name:'D Gap U-D-D',desc:'Down, gap, up-down, gap, down. Laid-back with a punchy landing on beat 4.',goodFor:'Laid-back grooves with a punchy landing — good for verses that need to breathe.',steps:['D','R','R','U','D','R','D','R']},
+  {n:23,name:'D-U-D-U-D-D',desc:'Down-up-down-up-down, gap, down. Six strokes with momentum that stops short.',goodFor:'Driving rhythm parts that want momentum but a clean stop rather than trailing off.',steps:['D','U','D','U','D','R','D','R']},
+  {n:24,name:'Up-D-D-D',desc:'Upstroke pickup then three steady downs.',goodFor:'Songs with a pickup upbeat lead-in before settling into a steady rhythm.',steps:['R','U','D','R','D','R','D','R']},
+  {n:25,name:'D-U-D-U + Up',desc:'Down-up-down-up-down, gap, gap, up. Long drive then a surprise upstroke.',goodFor:'Rock or pop choruses that want a surprise accent right at the very end of the bar.',steps:['D','U','D','U','D','R','R','U']},
+  {n:26,name:'D-U Gap D-U',desc:'Down-up, long gap, down-up, long gap. Two punchy pairs.',goodFor:'Spacious arrangements — two punchy hits with lots of room either side for vocals.',steps:['D','U','R','R','D','U','R','R']},
+  {n:27,name:'Offset Shuffle',desc:'Starts on an up — rest then rolling down-ups all the way.',goodFor:'A full shuffle that starts off the beat — good for songs with a syncopated pickup feel.',steps:['R','U','D','U','D','U','D','U']},
+  {n:28,name:'Up Bookends',desc:'Upstroke at the start, upstroke at the end, downs in between.',goodFor:'Songs that want upstroke accents bookending the bar, framing the chord changes.',steps:['R','U','D','R','D','R','D','U']},
+  {n:29,name:'D-U-D-U Gap D-U',desc:'Busy first half, a pause, then a closing down-up.',goodFor:'Mid-song builds — the rest on beat 3 creates real tension before the closing down-up.',steps:['D','U','D','U','R','U','D','U']},
+  {n:30,name:'D-D Gap Upturn',desc:'Two solid downs, a gap, then up-down-up to close.',goodFor:'Verses with a strong start that lifts into a syncopated tail going into the chorus.',steps:['D','R','D','R','R','U','D','U']},
+  {n:31,name:'Teen Spirit',desc:'The iconic Nirvana groove: d-u-d rest, d-u-d rest. Two punchy phrases.',goodFor:'Classic grunge and alt-rock. 🎵 Smells Like Teen Spirit (Nirvana), Let Her Go (Passenger).',steps:['D','U','D','R','D','U','D','R']},
+  {n:32,name:'Up-D-Up + D',desc:'Rest, up-down-up, gap, up-down. Floaty, suspended groove.',goodFor:'Floaty, suspended grooves for songs that never quite resolve to the downbeat.',steps:['R','U','D','U','R','U','D','R']},
+  {n:33,name:'Whiter Shade',desc:'"A Whiter Shade of Pale" — D rest U-D · D rest U-D. Two symmetrical two-beat phrases.',goodFor:'Stately ballads with organ feel. 🎵 A Whiter Shade of Pale (Procol Harum).',steps:['D','R','U','D','D','R','U','D']},
+  {n:34,name:'Hawaiian Strum',desc:'The classic traditional Hawaiian strum: D · D-U · U-D-U.',goodFor:'Traditional Hawaiian songs. 🎵 Somewhere Over the Rainbow (IZ version).',steps:['D','R','D','U','U','D','U','R']},
+  {n:35,name:'Classic Pop / Calypso',desc:'Down, down-up, gap-up, down-up. One of the most widely taught patterns.',goodFor:'The most universal pattern — pop, rock, calypso, CCM. If you learn one pattern, make it this one.',steps:['D','R','D','U','R','U','D','U']},
+  {n:36,name:'Country Boom-Chick-a',desc:'Down, long gap (bass note), then rolling down-up down-up.',goodFor:'Traditional country and bluegrass. 🎵 Ring of Fire, Wagon Wheel, Take Me Home Country Roads.',steps:['D','R','R','R','D','U','D','U']},
+  {n:37,name:'Rock Power Strum',desc:'Down, down-up-down-up, then two rests. Driving and energetic.',goodFor:'Classic rock and punk rhythm guitar parts with downstroke emphasis.',steps:['D','R','D','U','D','U','R','R']},
+  {n:38,name:'Six-Eighth Ballad',desc:'A true 6/8 pattern (6 slots): D rest D D-U D. Two dotted-quarter beats.',goodFor:'Soulful ballads and gospel-influenced acoustic songs written in 6/8 time.',steps:['D','R','D','D','U','D']},
+  {n:39,name:'Latin Bossa Nova',desc:'Down, gap, gap, down-up, gap, down, gap. Syncopated and laid-back.',goodFor:'Latin-jazz acoustic songs. 🎵 The Girl from Ipanema, Fly Me to the Moon bossa style.',steps:['D','R','R','D','U','R','D','R']},
+  {n:40,name:'Gypsy Jazz La Pompe',desc:'Down-up-down, rest, down-up, two rests. Classic Gypsy jazz "la pompe".',goodFor:'Gypsy jazz rhythm guitar. Django Reinhardt style — the heartbeat of the genre.',steps:['D','U','D','R','D','U','R','R']},
+  {n:41,name:'Indie Folk Syncopation',desc:'Down, gap, up, down-up, gap, up. Syncopated with deliberate gaps.',goodFor:'Modern indie-folk. 🎵 Ho Hey (The Lumineers), Little Lion Man (Mumford & Sons).',steps:['D','R','R','U','D','U','R','U']},
+  {n:42,name:'Blues Shuffle',desc:'Down, rest, down-up, then four rests. Sparse — swing the eighth notes.',goodFor:'Blues and blues-rock rhythm guitar — swing the notes for authentic shuffle feel.',steps:['D','R','D','U','R','R','R','R']},
+  {n:43,name:'Acoustic Pop Ballad',desc:'Down, down-up, two rests, up-down. The pause then upstroke surprise.',goodFor:'Acoustic pop ballads — the two-beat rest leaves space for a vocal phrase to breathe.',steps:['D','R','D','U','R','R','U','D']},
+  {n:44,name:'Campfire Singalong',desc:'Down, down, up, up, down. Steady rolling feel.',goodFor:'Group singalongs and campfire playing.',steps:['D','R','D','R','U','R','U','D']},
+  {n:45,name:'Chunk on 2 and 4',desc:'Down, ghost-chuck, down-up, ghost-chuck, up. Muted percussive hits add funky snap.',goodFor:'Funk-pop and new-wave. 🎵 She Bop (Cyndi Lauper), Here Comes Your Man (Pixies).',steps:['D','R','gD','R','D','U','gD','U']},
+  {n:46,name:'Reggae Skank (2 & 4)',desc:'Two rests, down-up, two rests, down-up. Hits only on beats 2 and 4.',goodFor:'Reggae rhythm. 🎵 Jamming (Bob Marley), Wild World (Cat Stevens).',steps:['R','R','D','U','R','R','D','U']}
+];
+var CUSTOM_PATTERNS = [];
+
+function allPatterns(){ return PATTERNS_BUILTIN.concat(CUSTOM_PATTERNS); }
+function patternCount(){ return allPatterns().length; }
+
+/* ═══════════════════════════════════════════
+   SVG ARROWS
+═══════════════════════════════════════════ */
+var SVG={
+  D:'<svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="4" x2="12" y2="16"/><polyline points="6 12 12 18 18 12"/></svg>',
+  U:'<svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="#4ecdc4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="8"/><polyline points="6 12 12 6 18 12"/></svg>',
+  gD:'<svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="#6b6a80" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3 2"><line x1="12" y1="4" x2="12" y2="16"/><polyline points="6 12 12 18 18 12"/></svg>',
+  R:'<svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="#3a3950" stroke-width="1.5"><circle cx="12" cy="12" r="5"/></svg>'
+};
+
+/* ═══════════════════════════════════════════
+   PLAYBACK
+═══════════════════════════════════════════ */
+var currentPattern=PATTERNS_BUILTIN[0], currentStep=-1, isPlaying=false, bpm=80, intervalId=null;
+var queue=[{patternIdx:0,repeats:2}];
+var selectedQueueItem=0, queueMode=false, queuePos=0, queueRepeatsDone=0;
+
+function renderPattern(p){
+  var is6=p.steps.length===6;
+  var labels=is6?['1','2','3','4','5','6']:['1','&','2','&','3','&','4','&'];
+  var html='<div class="beat-labels">';
+  labels.forEach(function(l,i){
+    var isMain=is6?(i%3===0):(i%2===0);
+    html+='<div class="beat-cell"><span class="'+(isMain?'beat-label-main':'beat-label-and')+'">'+l+'</span></div>';
+  });
+  html+='</div><div class="beat-row">';
+  p.steps.forEach(function(s,i){ html+='<div class="strum-cell" id="cell-'+i+'">'+(SVG[s]||SVG.R)+'</div>'; });
+  html+='</div>';
+  document.getElementById('beatDisplay').innerHTML=html;
+  var dots='';
+  p.steps.forEach(function(_,i){ dots+='<div class="beat-dot"><div class="beat-dot-inner" id="dot-'+i+'"></div></div>'; });
+  document.getElementById('beatDots').innerHTML=dots;
+  currentStep=-1; renderCount(-1);
+}
+
+function updateBeat(step){
+  currentPattern.steps.forEach(function(type,i){
+    var cell=document.getElementById('cell-'+i), dot=document.getElementById('dot-'+i);
+    if(!cell) return;
+    cell.className='strum-cell'; dot.className='beat-dot-inner';
+    if(i===step){
+      if(type==='U'){ cell.classList.add('active-beat-up'); dot.classList.add('lit-up'); }
+      else if(type!=='R'){ cell.classList.add('active-beat'); dot.classList.add('lit-down'); }
+    }
+  });
+  updateDrumBeat(step);
+  renderCount(step);
+}
+
+function renderCount(step){
+  var labels=currentPattern.steps.length===6?['1','2','3','4','5','6']:['1','&','2','&','3','&','4','&'];
+  var el=document.getElementById('countDisplay');
+  if(step<0||!isPlaying){ el.innerHTML='—'; return; }
+  var type=currentPattern.steps[step];
+  el.innerHTML=labels.map(function(l,i){
+    return i===step?'<span class="'+(type==='U'?'cur-u':'cur-d')+'">'+l+'</span>':'<span style="opacity:.3">'+l+'</span>';
+  }).join(' ');
+}
+
+function selectPatternDisplay(p){
+  currentPattern=p;
+  document.getElementById('patternTitle').textContent='#'+p.n+' '+p.name;
+  document.getElementById('patternTime').textContent=p.steps.length===6?'6/8':'4/4';
+  var custBadge=document.getElementById('customBadge');
+  if(custBadge) custBadge.style.display=p.custom?'':'none';
+  document.getElementById('patternDesc').textContent=p.desc;
+  document.getElementById('goodforText').textContent=p.goodFor||'';
+  document.querySelectorAll('.pattern-btn').forEach(function(b){ b.classList.toggle('active',allPatterns()[+b.dataset.idx]===p); });
+  renderPattern(p);
+  // Update Patterns tab action bar with visual beat diagram
+  var bar=document.getElementById('patternActionBar');
+  if(bar){
+    bar.style.display='';
+    var barName=document.getElementById('patternActionName');
+    var barTime=document.getElementById('patternActionTime');
+    var barLabels=document.getElementById('patternActionLabels');
+    var barCells=document.getElementById('patternActionCells');
+    if(barName) barName.textContent='#'+p.n+' '+p.name;
+    if(barTime) barTime.textContent=p.steps.length===6?'6/8':'4/4';
+    if(barLabels&&barCells){
+      var is6=p.steps.length===6;
+      var lbls=is6?['1','2','3','4','5','6']:['1','&','2','&','3','&','4','&'];
+      var mainIdxs=is6?[0,3]:[0,2,4,6];
+      barLabels.innerHTML=lbls.map(function(l,i){
+        return '<div class="mini-beat-label'+(mainIdxs.indexOf(i)>=0?' main':'')+'">'+l+'</div>';
+      }).join('');
+      barCells.innerHTML=p.steps.map(function(s){
+        var cls='mini-cell';
+        if(s==='D') cls+=' is-down';
+        else if(s==='U') cls+=' is-up';
+        else if(s==='gD') cls+=' is-ghost';
+        else cls+=' is-rest';
+        return '<div class="'+cls+'">'+SVG[s]+'</div>';
+      }).join('');
+    }
+  }
+}
+
+function selectPattern(idx){
+  var all=allPatterns();
+  if(idx<0||idx>=all.length) return;
+  assignPatternToQueue(idx);
+}
+
+function assignPatternToQueue(idx){
+  if(selectedQueueItem>=queue.length) selectedQueueItem=0;
+  queue[selectedQueueItem].patternIdx=idx;
+  renderQueue();
+  selectPatternDisplay(allPatterns()[idx]);
+}
+
+function startPlay(){
+  ensureAudio();
+  isPlaying=true;
+  if(queue.length>1){
+    queueMode=true;
+    if(queuePos>=queue.length){ queuePos=0; queueRepeatsDone=0; }
+    currentPattern=allPatterns()[queue[queuePos].patternIdx];
+    selectPatternDisplay(currentPattern);
+  } else { queueMode=false; }
+  document.getElementById('playBtn').innerHTML='<svg viewBox="0 0 24 24" fill="white"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>';
+  document.getElementById('unlockBanner').classList.remove('show');
+  var ms=60000/(bpm*2);
+  currentStep=-1;
+  intervalId=setInterval(function(){
+    currentStep=(currentStep+1)%currentPattern.steps.length;
+    var type=currentPattern.steps[currentStep];
+    if(type==='D') playDown();
+    else if(type==='U') playUp();
+    else if(type==='gD') playGhost();
+    playDrumStep(currentStep);
+    updateBeat(currentStep);
+    if(queueMode&&currentStep===currentPattern.steps.length-1){
+      queueRepeatsDone++;
+      updateQueueProgress();
+      if(queueRepeatsDone>=queue[queuePos].repeats){
+        queuePos=(queuePos+1)%queue.length;
+        queueRepeatsDone=0;
+        currentPattern=allPatterns()[queue[queuePos].patternIdx];
+        selectPatternDisplay(currentPattern);
+        currentStep=-1;
+      }
+    }
+  },ms);
+  updateQueueProgress();
+}
+
+function stopPlay(){
+  isPlaying=false; clearInterval(intervalId); intervalId=null;
+  document.getElementById('playBtn').innerHTML='<svg viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>';
+  updateBeat(-1); renderCount(-1);
+  document.getElementById('queueProgress').style.display='none';
+}
+
+function togglePlay(){ if(isPlaying) stopPlay(); else startPlay(); }
+function updateBPM(val){ bpm=parseInt(val); document.getElementById('bpmDisplay').textContent=bpm+' BPM'; document.getElementById('bpmSlider').value=bpm; if(isPlaying){ stopPlay(); startPlay(); } }
+function setBPM(v){ updateBPM(v); }
+function updateVolume(val){ volume=val/100; if(masterGain) masterGain.gain.value=volume; }
+function toggleSound(){ soundEnabled=!soundEnabled; document.getElementById('soundToggle').classList.toggle('on',soundEnabled); document.getElementById('soundLabel').textContent=soundEnabled?'Sound On':'Sound Off'; }
+
+/* ═══════════════════════════════════════════
+   QUEUE
+═══════════════════════════════════════════ */
+function queueAdd(){
+  var idx=allPatterns().indexOf(currentPattern);
+  queue.push({patternIdx:Math.max(0,idx),repeats:2});
+  selectedQueueItem=queue.length-1;
+  renderQueue();
+}
+function queueRemove(i){ if(queue.length<=1) return; queue.splice(i,1); if(selectedQueueItem>=queue.length) selectedQueueItem=queue.length-1; renderQueue(); }
+function queueSelect(i){ selectedQueueItem=i; renderQueue(); if(!isPlaying){ var p=allPatterns()[queue[i].patternIdx]; selectPatternDisplay(p); } }
+function queueSetRepeats(i,d){ queue[i].repeats=Math.max(1,Math.min(16,queue[i].repeats+d)); renderQueue(); }
+
+function renderQueue(){
+  var list=document.getElementById('queueList'); list.innerHTML='';
+  queue.forEach(function(item,i){
+    var p=allPatterns()[item.patternIdx]||allPatterns()[0];
+    var div=document.createElement('div');
+    div.className='queue-item'+(i===selectedQueueItem?' selected':'')+(isPlaying&&queueMode&&i===queuePos?' playing':'');
+    div.innerHTML=
+      '<span class="queue-drag" title="Drag to reorder">⠿</span>'+
+      '<div class="queue-item-num">'+p.n+'</div>'+
+      '<div class="queue-item-info"><div class="queue-item-name">'+p.name+'</div>'+
+      '<div class="queue-item-sub">'+(p.steps.length===6?'6/8':'4/4')+' · '+p.steps.filter(function(s){return s!=='R';}).length+' strokes</div></div>'+
+      '<div class="queue-item-controls">'+
+        '<span class="repeats-label">×</span>'+
+        '<button class="repeats-btn" onclick="event.stopPropagation();queueSetRepeats('+i+',-1)">−</button>'+
+        '<span class="repeats-count">'+item.repeats+'</span>'+
+        '<button class="repeats-btn" onclick="event.stopPropagation();queueSetRepeats('+i+',+1)">+</button>'+
+        '<button class="queue-del-btn" onclick="event.stopPropagation();queueRemove('+i+')" title="Remove">✕</button>'+
+      '</div>';
+    div.addEventListener('click',function(){ queueSelect(i); });
+    list.appendChild(div);
+  });
+}
+
+function updateQueueProgress(){
+  var el=document.getElementById('queueProgress');
+  var fill=document.getElementById('queueProgressFill');
+  var label=document.getElementById('queueProgressLabel');
+  if(!queueMode||!isPlaying){ el.style.display='none'; return; }
+  el.style.display='flex';
+  var item=queue[queuePos];
+  fill.style.width=((queueRepeatsDone/item.repeats)*100)+'%';
+  label.textContent='Block '+(queuePos+1)+'/'+queue.length+' · bar '+(queueRepeatsDone+1)+'/'+item.repeats;
+  document.querySelectorAll('.queue-item').forEach(function(el,i){ el.classList.toggle('playing',i===queuePos); });
+}
+
+/* ═══════════════════════════════════════════
+   PATTERN GRID
+═══════════════════════════════════════════ */
+function buildPatternGrid(){
+  var grid=document.getElementById('patternGrid'); grid.innerHTML='';
+  allPatterns().forEach(function(p,idx){
+    var btn=document.createElement('button');
+    btn.className='pattern-btn'+(p.custom?' custom':''); btn.dataset.idx=idx;
+    btn.innerHTML='<div class="pnum">'+p.n+'</div><div class="pname">'+p.name+'</div>';
+    btn.onclick=function(){ selectPattern(idx); };
+    grid.appendChild(btn);
+  });
+  var lbl=document.getElementById('patternCountLabel');
+  if(lbl) lbl.textContent='Choose a Pattern ('+patternCount()+' patterns)';
+}
+
+/* ═══════════════════════════════════════════
+   SOUND OPTIONS
+═══════════════════════════════════════════ */
+function buildSoundOpts(){
+  var downEl=document.getElementById('downSoundOpts');
+  Object.entries(DOWN_SOUNDS).forEach(function(e){ var key=e[0],val=e[1];
+    var btn=document.createElement('button');
+    btn.className='sound-opt'+(key===downSoundType?' active-d':'');
+    btn.textContent=val.label;
+    btn.onclick=function(){ ensureAudio(); downSoundType=key; document.querySelectorAll('#downSoundOpts .sound-opt').forEach(function(b){b.classList.remove('active-d');}); btn.classList.add('active-d'); val.fn(audioCtx.currentTime); };
+    downEl.appendChild(btn);
+  });
+  var upEl=document.getElementById('upSoundOpts');
+  Object.entries(UP_SOUNDS).forEach(function(e){ var key=e[0],val=e[1];
+    var btn=document.createElement('button');
+    btn.className='sound-opt'+(key===upSoundType?' active-u':'');
+    btn.textContent=val.label;
+    btn.onclick=function(){ ensureAudio(); upSoundType=key; document.querySelectorAll('#upSoundOpts .sound-opt').forEach(function(b){b.classList.remove('active-u');}); btn.classList.add('active-u'); val.fn(audioCtx.currentTime); };
+    upEl.appendChild(btn);
+  });
+}
+
+/* ═══════════════════════════════════════════
+   GOOD-FOR POPUP
+═══════════════════════════════════════════ */
+var isTouchDevice=window.matchMedia('(hover: none)').matches||'ontouchstart' in window;
+function openGoodforModal(){
+  document.getElementById('goodforModalPattern').textContent='#'+currentPattern.n+' '+currentPattern.name;
+  document.getElementById('goodforModalText').textContent=currentPattern.goodFor||'A versatile pattern — try it across different songs.';
+  document.getElementById('goodforModalOverlay').classList.add('show');
+}
+function closeGoodforModal(){ document.getElementById('goodforModalOverlay').classList.remove('show'); }
+document.getElementById('infoBtn').addEventListener('click',function(e){ e.stopPropagation(); if(isTouchDevice) openGoodforModal(); });
+document.getElementById('goodforModalOverlay').addEventListener('click',function(e){ if(e.target.id==='goodforModalOverlay') closeGoodforModal(); });
+
+/* ═══════════════════════════════════════════
+   CUSTOM PATTERN BUILDER
+═══════════════════════════════════════════ */
+var builderSteps=['R','R','R','R','R','R','R','R'];
+var STEP_CYCLE=['R','D','U','gD'];
+var STEP_LABEL={'R':'–','D':'D','U':'U','gD':'G'};
+
+function buildBuilderSlots(){
+  var row=document.getElementById('builderSlots'); if(!row) return;
+  row.innerHTML='';
+  builderSteps.forEach(function(s,i){
+    var btn=document.createElement('button');
+    btn.className='beat-tap-btn'; btn.dataset.idx=i; btn.dataset.val=s;
+    btn.textContent=STEP_LABEL[s];
+    btn.onclick=function(){
+      var cur=builderSteps[i];
+      var next=STEP_CYCLE[(STEP_CYCLE.indexOf(cur)+1)%STEP_CYCLE.length];
+      builderSteps[i]=next; btn.dataset.val=next; btn.textContent=STEP_LABEL[next];
+    };
+    row.appendChild(btn);
+  });
+}
+
+var editingCustomIdx = -1; // index into CUSTOM_PATTERNS, or -1 for new
+
+function renderMyPatterns(){
+  var panel=document.getElementById('myPatternsPanel');
+  var list=document.getElementById('myPatternsList');
+  if(!panel||!list) return;
+  if(CUSTOM_PATTERNS.length===0){ panel.style.display='none'; return; }
+  panel.style.display='';
+  list.innerHTML='';
+  CUSTOM_PATTERNS.forEach(function(p,ci){
+    var row=document.createElement('div'); row.className='my-pat-row';
+    var stepsStr=p.steps.map(function(s){return STEP_LABEL[s]||s;}).join(' ');
+    row.innerHTML='<div class="my-pat-name">'+p.name+'</div>'
+      +'<div class="my-pat-steps">'+stepsStr+'</div>'
+      +'<button class="my-pat-btn" title="Duplicate & Edit" onclick="duplicateCustomPattern('+ci+')">⧉</button>'
+      +'<button class="my-pat-btn" title="Edit" onclick="editCustomPattern('+ci+')">✏️</button>'
+      +'<button class="my-pat-btn del" title="Delete" onclick="deleteCustomPattern('+ci+')">✕</button>';
+    list.appendChild(row);
+  });
+}
+
+function duplicateCustomPattern(ci){
+  var p=CUSTOM_PATTERNS[ci]; if(!p) return;
+  builderCancel();
+  builderSteps=p.steps.slice(0,8); while(builderSteps.length<8) builderSteps.push('R');
+  buildBuilderSlots();
+  document.getElementById('builderName').value='Copy of '+p.name;
+  setTimeout(function(){
+    var bp=document.querySelector('#tab-patterns .builder-panel');
+    if(bp) bp.scrollIntoView({behavior:'smooth',block:'start'});
+  },80);
+}
+
+function editCustomPattern(ci){
+  var p=CUSTOM_PATTERNS[ci];
+  if(!p) return;
+  editingCustomIdx=ci;
+  builderSteps=p.steps.slice(0,8); while(builderSteps.length<8) builderSteps.push('R');
+  buildBuilderSlots();
+  document.getElementById('builderName').value=p.name;
+  var title=document.getElementById('builderTitle');
+  if(title){title.textContent='✏️ Edit Pattern'; title.classList.add('editing');}
+  var saveBtn=document.getElementById('builderSaveBtn'); if(saveBtn) saveBtn.textContent='✔ Update Pattern';
+  var cancelBtn=document.getElementById('builderCancelBtn'); if(cancelBtn) cancelBtn.style.display='';
+  // scroll to builder
+  var bp=document.querySelector('.builder-panel:last-of-type'); if(bp) bp.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function deleteCustomPattern(ci){
+  var p=CUSTOM_PATTERNS[ci];
+  if(!p) return;
+  if(!confirm('Delete "'+p.name+'"?')) return;
+  CUSTOM_PATTERNS.splice(ci,1);
+  if(editingCustomIdx===ci){ builderCancel(); }
+  else if(editingCustomIdx>ci){ editingCustomIdx--; }
+  buildPatternGrid(); renderMyPatterns();
+}
+
+function builderCancel(){
+  editingCustomIdx=-1;
+  builderSteps=['R','R','R','R','R','R','R','R']; buildBuilderSlots();
+  document.getElementById('builderName').value='';
+  var title=document.getElementById('builderTitle');
+  if(title){title.textContent='🛠 Build Your Own Beat'; title.classList.remove('editing');}
+  var saveBtn=document.getElementById('builderSaveBtn'); if(saveBtn) saveBtn.textContent='+ Add to Patterns';
+  var cancelBtn=document.getElementById('builderCancelBtn'); if(cancelBtn) cancelBtn.style.display='none';
+}
+
+function duplicateCurrentPattern(){
+  if(!currentPattern) return;
+  builderCancel(); // clear any in-progress edit
+  builderSteps=currentPattern.steps.slice(0,8);
+  while(builderSteps.length<8) builderSteps.push('R');
+  buildBuilderSlots();
+  var copyName='Copy of '+currentPattern.name;
+  document.getElementById('builderName').value=copyName;
+  showTab('patterns');
+  // scroll to builder
+  setTimeout(function(){
+    var bp=document.querySelector('#tab-patterns .builder-panel');
+    if(bp) bp.scrollIntoView({behavior:'smooth',block:'start'});
+  },120);
+}
+
+function builderReset(){ builderSteps=['R','R','R','R','R','R','R','R']; buildBuilderSlots(); }
+
+function builderPreview(){
+  ensureAudio();
+  var steps=builderSteps.slice();
+  var i=0, ms=60000/(bpm*2);
+  var tid=setInterval(function(){
+    var t=steps[i];
+    if(t==='D') playDown();
+    else if(t==='U') playUp();
+    else if(t==='gD') playGhost();
+    i++;
+    if(i>=steps.length) clearInterval(tid);
+  },ms);
+}
+
+function builderSave(){
+  var name=document.getElementById('builderName').value.trim();
+  if(!name){ alert('Please enter a pattern name.'); return; }
+  if(builderSteps.every(function(s){return s==='R';})){alert('Pattern has no strokes — tap some slots first.'); return; }
+  if(editingCustomIdx>=0 && editingCustomIdx<CUSTOM_PATTERNS.length){
+    // Update existing
+    CUSTOM_PATTERNS[editingCustomIdx].name=name;
+    CUSTOM_PATTERNS[editingCustomIdx].steps=builderSteps.slice();
+    buildPatternGrid(); renderMyPatterns(); builderCancel();
+    showTab('play');
+    return;
+  }
+  var maxN=0;
+  allPatterns().forEach(function(p){ if(p.n>maxN) maxN=p.n; });
+  var p={n:maxN+1,name:name,desc:'Custom pattern.',goodFor:'Your custom pattern.',steps:builderSteps.slice(),custom:true};
+  CUSTOM_PATTERNS.push(p);
+  buildPatternGrid(); renderMyPatterns();
+  selectPatternDisplay(p);
+  document.getElementById('builderName').value='';
+  builderReset();
+  showTab('play');
+}
+
+function clearInput(id){ document.getElementById(id).value=''; document.getElementById(id).focus(); }
+
+/* Paste / import D-U notation */
+function doPaste(){
+  if(!navigator.clipboard||!navigator.clipboard.readText){ alert('Clipboard not available — paste manually into the box.'); return; }
+  navigator.clipboard.readText().then(function(text){
+    document.getElementById('pasteArea').textContent=text;
+  }).catch(function(){ alert('Could not read clipboard. Paste manually into the box below.'); });
+}
+
+function parsePaste(){
+  var raw=document.getElementById('pasteArea').textContent.trim();
+  if(!raw){ alert('Nothing to parse.'); return; }
+  // Try JSON first
+  try{
+    var obj=JSON.parse(raw);
+    if(obj.strumming_patterns||obj.patterns){
+      var arr=obj.strumming_patterns||obj.patterns;
+      var added=0;
+      arr.forEach(function(item){
+        var steps=parseNotation(item.beats||item.steps||'');
+        if(!steps||steps.length===0) return;
+        var maxN=0; allPatterns().forEach(function(p){if(p.n>maxN)maxN=p.n;});
+        CUSTOM_PATTERNS.push({n:maxN+1,name:item.name||'Imported',desc:item.description||item.desc||'',goodFor:'',steps:steps,custom:true});
+        added++;
+      });
+      buildPatternGrid(); renderMyPatterns();
+      alert('Imported '+added+' pattern'+(added!==1?'s':'')+'.');
+      document.getElementById('pasteArea').textContent='';
+      return;
+    }
+    if(obj.queue&&Array.isArray(obj.queue)){ queue=obj.queue; selectedQueueItem=0; renderQueue(); }
+    if(obj.custom_patterns&&Array.isArray(obj.custom_patterns)){
+      obj.custom_patterns.forEach(function(p){ CUSTOM_PATTERNS.push(p); });
+      buildPatternGrid(); renderMyPatterns();
+    }
+    alert('Loaded from JSON.'); document.getElementById('pasteArea').textContent=''; return;
+  }catch(e){}
+  // Try notation string
+  var steps=parseNotation(raw);
+  if(steps&&steps.length>0){
+    builderSteps=steps.slice(0,8); while(builderSteps.length<8) builderSteps.push('R');
+    buildBuilderSlots();
+    alert('Pattern loaded into builder — give it a name and click Add.');
+    document.getElementById('pasteArea').textContent='';
+  } else {
+    alert('Could not parse. Expected D/U/R/G notation like "D DU UDU" or JSON.');
+  }
+}
+
+function parseNotation(str){
+  if(!str) return null;
+  // handle array of strings
+  if(Array.isArray(str)){
+    return str.map(function(s){
+      s=s.trim().toUpperCase();
+      if(s==='D'||s==='DOWN') return 'D';
+      if(s==='U'||s==='UP') return 'U';
+      if(s==='GD'||s==='G'||s==='GHOST') return 'gD';
+      return 'R';
+    }).slice(0,8);
+  }
+  // text notation
+  str=str.replace(/[()[\]]/g,'').replace(/fast|slow|palm\s*muted|triplet.*|fanned.*/gi,'').trim();
+  var tokens=str.split(/[\s,]+/);
+  var steps=[];
+  tokens.forEach(function(tok){
+    tok=tok.toUpperCase();
+    var i=0;
+    while(i<tok.length&&steps.length<8){
+      if(tok[i]==='D'&&tok[i+1]==='U'){ steps.push('D'); i++; }
+      else if(tok[i]==='U'&&tok[i+1]==='D'){ steps.push('U'); i++; }
+      else if(tok[i]==='D') steps.push('D');
+      else if(tok[i]==='U') steps.push('U');
+      else if(tok[i]==='-'||tok[i]==='R'||tok[i]==='X') steps.push('R');
+      else if(tok[i]==='G') steps.push('gD');
+      i++;
+    }
+  });
+  return steps.length>0?steps:null;
+}
+
+/* ═══════════════════════════════════════════
+   SAVE / LOAD JSON
+═══════════════════════════════════════════ */
+function exportJSON(){
+  var data={
+    version:'2.2',
+    exported: new Date().toISOString(),
+    queue: queue,
+    custom_patterns: CUSTOM_PATTERNS
+  };
+  // Build filename: include up to 3 custom pattern names, slugified
+  var slug='';
+  if(CUSTOM_PATTERNS.length>0){
+    var names=CUSTOM_PATTERNS.slice(0,3).map(function(p){
+      return p.name.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    });
+    slug='-'+names.join('|');
+  }
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a'); a.href=url; a.download='strumgroove-export'+slug+'.json'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+function triggerImport(){ document.getElementById('importFile').click(); }
+
+function importJSON(input){
+  var file=input.files[0]; if(!file) return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      var obj=JSON.parse(e.target.result);
+      var added=0;
+      if(obj.custom_patterns&&Array.isArray(obj.custom_patterns)){
+        obj.custom_patterns.forEach(function(p){
+          var exists=CUSTOM_PATTERNS.some(function(x){return x.name===p.name;});
+          if(!exists){ var maxN=0; allPatterns().forEach(function(x){if(x.n>maxN)maxN=x.n;}); p.n=maxN+1; CUSTOM_PATTERNS.push(p); added++; }
+        });
+      }
+      if(obj.queue&&Array.isArray(obj.queue)){ queue=obj.queue; selectedQueueItem=0; renderQueue(); }
+      buildPatternGrid(); renderMyPatterns();
+      alert('Imported. '+added+' new custom pattern'+(added!==1?'s':'')+' added.');
+    }catch(ex){ alert('Could not parse file: '+ex.message); }
+    input.value='';
+  };
+  reader.readAsText(file);
+}
+
+/* ═══════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════ */
+buildPatternGrid();
+buildSoundOpts();
+buildBuilderSlots();
+renderMyPatterns();
+renderQueue();
+selectPatternDisplay(PATTERNS_BUILTIN[0]);
+document.getElementById('unlockBanner').classList.add('show');
+</script>
+</body>
+</html>

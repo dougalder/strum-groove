@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StrumGroove v2.7 — Learn and practice guitar and ukulele strumming patterns with 46 built-in patterns, custom builder, and complementary drum tracks.">
+    <meta name="keywords" content="guitar, ukulele, strumming, patterns, practice, trainer, music">
+    <meta name="author" content="StrumGroove Contributors">
+    <title>StrumGroove — Strum Trainer</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAElklEQVRYhb2XS2xUVRjHf+eeO3PncafTYUpnUJRWRAuNL2qamNAdiRAsiQbjxrhggY9EQ8LCuGviyoQ9MbW6clFi2JCYqA0K6KYR5NVOUUohlHYKnc7jznRed+5xMW2hlHlYgf/q5n7n+/6/+53XjOA+mWakXWp8BuwDtgF+Ho3SQEwhvs9kzEG4VlwOiOWHYDD6LkoNAYFHZFpLE46Sb1vWzMQKwJL58P1Aj1kJhfNGJnP3H7HU9ms8/i9fLcWltDXXI70e8wtg9xM1BxBEvO7ADR3FW802XhOCXdtbefO1MDs2m0RDbgDiyRLj01l++ivB77EUjlJN1VOoD0SwJWIBZqPBz0W8DLy3lVc66s/UxRsWA8OTXJ/LN8OQEsGWSEPcF5/yM/jJDoI+HcdxWMzlKeaL2JUKALqUGF4Dn9+LpmlkCzYfHotx5Va2IUFDgJBf58Tnr7LBdFEqlkglLZwl4welSUlrKIDbcLOQLfPOVxdI5uy6AFojwiP7O9hguiiXbVKJdE1zAKdSIZVIUy7bbDBdHNnf0ah8fYCNQTd7d4ZRQDqZaWpxOUqRTmYAxd6eNiJB9/oB+nva0KVGMV/CLldbGc07RPPOmrHDvQcZ7j0IgF22KRTK6JpgX0/b+gF6tgYBKBYKK+9CBUWosLoTI939TLZ3MdnexUh3fzUnX83ZuVSjlvR6wW2bfACUSuWaY0a6+xnt7CNQSAMw2tkHwJ6JHwF4YalGLdXtQKuvyudU1rYc4G5gE6OdffROnSWUSxDKJeidOstoZx9xf2RVjXUBqJUTUuGtrF2Az6ZmOHT6KLvHTq682z12kkOnj9JuzVbh69o3mIJktsymkIHfge6ETdx3j3dLtkJ00UGoORb11Wd5m3UHoUsAFrK1pw8adOBWorqQbJ9B3KcRXXTwVBSeiiK66BD3aWvMl+V2Vb9tOlF4aLwpgPOTFgCGYXDTlMR9Gm5H4XYUcZ/GTVPWzHUbBgDnrmXWD/Db2AIAHp+BplUNU4YgZYg15l3xy3TFLwMgNIHHVwU4E0vWBai7BmLTOS7dtHh5SwC/6cPKZLkafHjK61N/rDybAR9CCC7csIhN5+oCNLwLvvnlNgD+gBfdVX9LAeguHb9Z3ftDI7cbjm8IcHo8ya+XFwBBKBxE02qnaFISCgcBwalLC5wZr9/+pgAABo5PcitRQEpJeGMITa5N06RGuK0VKSUzC0W+/OF6M6WbA0jlbA5/e5VUzkbqkrb2MB6vsRL3eA3a2sNIXZLK2Xw6NNFw/y9LBFsiKaD+jbGkZ8Iejn20nWfCHuDeHeF2uwCYTRb5+OsYU3ea+jkGkJEej7kH6GhqdN7m5J/ztPh1dmw2kVIiZXU7/nwxweGhCWZTpWbNATEuPW5TItjfbErJdjgzluTClMXTIQ+zyRIDxyf57tQMhXKjk/8Be8SgAPRgMHIexUv/Kfv/K+0o+bwG2I5TOQAknqC5Eo46aFkz8xqAZc3/7Si5C4g9AfO0cNSBVPbOCYCVA71UsuaLxY5Bw8jPadBK9b+i5xGZZkFdEWiDjpLvZ7Lxc8uBfwGHsbXT5tPKDwAAAABJRU5ErkJggg==">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --accent: #ff6b35;
+            --up: #4ecdc4;
+            --bg: #0f0e17;
+            --surface: #1a1929;
+            --text: #fffffe;
+            --text2: #a7a6b8;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --accent: #e85d2a;
+                --up: #2a9d8f;
+                --bg: #f4f2ee;
+                --surface: #fff;
+                --text: #1a1614;
+                --text2: #4a4540;
+            }
+        }
+
+        body {
+            font-family: 'Nunito', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: var(--text2);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text2);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
+        }
+
+        .cta-button.secondary {
+            background: var(--surface);
+            color: var(--text);
+            border: 2px solid var(--accent);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 60px 0;
+        }
+
+        .feature {
+            background: var(--surface);
+            padding: 24px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: var(--text2);
+            line-height: 1.6;
+        }
+
+        .emoji {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .highlights {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            margin: 60px 0;
+        }
+
+        .highlights h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .highlights ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .highlights li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--text2);
+        }
+
+        .highlights li::before {
+            content: "✓ ";
+            color: var(--up);
+            font-weight: 900;
+            margin-right: 8px;
+        }
+
+        .browser-support {
+            background: var(--surface);
+            padding: 24px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            margin: 40px 0;
+            font-size: 14px;
+        }
+
+        .browser-support h3 {
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .browser-support p {
+            color: var(--text2);
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            color: var(--text2);
+            font-size: 14px;
+        }
+
+        .links {
+            margin: 20px 0;
+        }
+
+        .links a {
+            color: var(--up);
+            text-decoration: none;
+            margin: 0 12px;
+            transition: opacity 0.2s;
+        }
+
+        .links a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 36px;
+            }
+
+            .highlights ul {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Strum<span>Groove</span></div>
+            <p class="tagline">v2.7 — Strum Trainer</p>
+            <p class="subtitle">Learn and practice guitar & ukulele strumming patterns</p>
+            <div style="margin: 30px 0;">
+                <a href="strumgroove.html" class="cta-button">🎸 Launch App</a>
+                <a href="#features" class="cta-button secondary">Learn More</a>
+            </div>
+        </header>
+
+        <section id="features" class="features">
+            <div class="feature">
+                <h3><span class="emoji">✨</span>46 Built-in Patterns</h3>
+                <p>Classic strumming patterns for folk, pop, rock, reggae, waltz, funk, flamenco, and more.</p>
+            </div>
+            <div class="feature">
+                <h3><span class="emoji">🎵</span>Web Audio Synthesis</h3>
+                <p>All sounds generated on-the-fly. No audio files to download, no waiting.</p>
+            </div>
+            <div class="feature">
+                <h3><span class="emoji">🥁</span>Drum Patterns</h3>
+                <p>6 complementary drum presets play underneath your strums with independent volume control.</p>
+            </div>
+            <div class="feature">
+                <h3><span class="emoji">⚡</span>Build Your Own</h3>
+                <p>Create custom patterns, save, edit, and duplicate them as needed.</p>
+            </div>
+            <div class="feature">
+                <h3><span class="emoji">💾</span>Save & Load</h3>
+                <p>Export your patterns and queues as JSON. Import and share with friends.</p>
+            </div>
+            <div class="feature">
+                <h3><span class="emoji">🎨</span>Dark & Light Mode</h3>
+                <p>Toggle between themes. Your preference is saved automatically.</p>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <h2>Key Features</h2>
+            <ul>
+                <li>No installation — works in any modern browser</li>
+                <li>Completely offline after first load</li>
+                <li>Runs on desktop, tablet, and mobile</li>
+                <li>Adjustable tempo (40–200 BPM)</li>
+                <li>Sound options (warm, bright, mellow, sharp)</li>
+                <li>Screen wake lock for iOS 16.4+</li>
+                <li>Queue patterns for practice sessions</li>
+                <li>Edit and customize any pattern</li>
+                <li>Light & dark themes with auto-save</li>
+                <li>No account, no tracking, no ads</li>
+            </ul>
+        </section>
+
+        <section class="browser-support">
+            <h3>Browser Support</h3>
+            <p><strong>Desktop:</strong> Chrome 86+, Safari 14+, Firefox 79+, Edge 86+</p>
+            <p><strong>Mobile:</strong> Safari 14.4+ (iOS), Chrome 86+ (Android)</p>
+            <p><strong>Features:</strong> Screen wake lock requires iOS 16.4+ Safari or Chrome 84+</p>
+        </section>
+
+        <footer>
+            <p>StrumGroove is free, open source, and built with HTML, CSS, and vanilla JavaScript.</p>
+            <div class="links">
+                <a href="README.md">Documentation</a>
+                <a href="LICENSE">License (MIT)</a>
+                <a href="TECHNOLOGIES.md">Technologies</a>
+                <a href="https://github.com">GitHub</a>
+            </div>
+            <p style="margin-top: 20px;">Learn. Practice. Groove. 🎸🎵</p>
+        </footer>
+    </div>
+</body>
+</html>
